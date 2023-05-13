@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-lg bg-green navbar-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img
+        src="../../assets/brand.png"
+        alt="Logo"
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top background-brand"
+      />
+      {{ brand }}
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Artista
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/inserisci-artista"
+                >Inserisci</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/visualizza-artisti"
+                >Visualizza</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="/cerca-artista">Cerca</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Album
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/inserisci-album"
+                >Inserisci</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/visualizza-album"
+                >Visualizza</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="/cerca-album">Cerca</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Traccia
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/inserisci-traccia"
+                >Inserisci</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/visualizza-tracce"
+                >Visualizza</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="/cerca-traccia">Cerca</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contatti">Contatti</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

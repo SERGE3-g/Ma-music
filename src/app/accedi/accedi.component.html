@@ -1,0 +1,46 @@
+<style>
+    section {
+        margin: 0 auto;
+        width: 400px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    label span {
+        display: inline-block;
+        width: 100px;
+    }
+    input {
+        width: 200px;
+    }
+    button {
+        margin-top: 10px;
+    }
+
+
+</style>
+
+<section>
+    <form [formGroup]="accediForm" (ngSubmit)="inviaDati(content)">
+        <label>
+            <span>Email</span>
+            <input type="email" class="form-control" id="FormEmail" formControlName="emailForm">
+        </label>
+        <label>
+            <span>Username</span>
+            <input type="username" class="form-control" id="FormUsername" formControlName="UsernameForm">
+        </label>
+        <label>
+            <span>Password</span>
+            <input type="password" class="form-control" id="FormPassword" placeholder="Password" formControlName="passwordForm">
+        </label>
+        <div>
+            <button type="submit" class="btn btn-primary">Accedi</button>     
+        </div>
+     </form>
+</section>
+
+
+
+

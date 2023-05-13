@@ -1,0 +1,22 @@
+<section>
+  <h4 class="text-center">Inserisci l'ID dell'Artista da cercare</h4>
+  <div class="input-group mb-3">
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Digita ID"
+      aria-label="Digita ID"
+      aria-describedby="button-search"
+      [(ngModel)]="artistaId"
+      name="artistaId"
+    />
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+      id="button-search"
+      (click)="cercaArtista()"
+    >
+      Cerca
+    </button>
+  </div>
+</section>

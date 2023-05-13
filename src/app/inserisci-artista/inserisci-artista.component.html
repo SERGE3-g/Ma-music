@@ -1,0 +1,88 @@
+<section>
+  <app-component-title [titoloChild]="titoloParent"></app-component-title>
+  <form
+    class="row g-3"
+    [formGroup]="artistaForm"
+    (ngSubmit)="inviaDati(content)"
+  >
+    <div class="col-lg-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        placeholder="Nome"
+        formControlName="nomeForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="annoInizio" class="form-label">Anno Inizio</label>
+      <input
+        type="number"
+        class="form-control"
+        id="annoInizio"
+        placeholder="Anno Inizio"
+        formControlName="annoInizioForm"
+      />
+    </div>
+    <div class="col-lg-10">
+      <label for="nazione" class="form-label">Nazione</label>
+      <select class="form-select" id="nazione" formControlName="nazioneForm">
+        <option *ngFor="let nazione of nazioni" [value]="nazione">
+          {{ nazione }}
+        </option>
+      </select>
+    </div>
+    <div class="col-lg-2">
+      <label class="form-label">Gruppo</label>
+      <div class="form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="gruppo"
+          formControlName="gruppoForm"
+        />
+        <label for="gruppo" class="form-check-label">Sì</label>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <button type="submit" class="btn btn-primary">Invia</button>
+    </div>
+  </form>
+
+  <!-- Modal -->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Info</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <h5>Inserito il seguente Artista</h5>
+      <ul class="list-group">
+        <li class="list-group-item">ID: {{ artistaInserito.id }}</li>
+        <li class="list-group-item">Nome: {{ artistaInserito.nome }}</li>
+        <li class="list-group-item">Nazione: {{ artistaInserito.nazione }}</li>
+        <li class="list-group-item">
+          Anno Inizio: {{ artistaInserito.annoInizio }}
+        </li>
+        <li class="list-group-item">
+          Gruppo: {{ artistaInserito.gruppo ? "Sì" : "No" }}
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="modal.close()"
+      >
+        Close
+      </button>
+    </div>
+  </ng-template>
+</section>

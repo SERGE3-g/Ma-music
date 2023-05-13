@@ -1,0 +1,176 @@
+<style>
+    section {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    form {
+        text-align: center;
+    }
+    .btn {
+        text-align: center;
+    }
+    .form-label {
+        text-align: left;
+    }
+    .form-select {
+        text-align: left;
+    }
+    .form-check {
+        text-align: left;
+    }
+    .form-check-label {
+        text-align: left;
+    }
+    .form-control {
+        text-align: left;
+    }
+    .col-lg-6 {
+        text-align: left;
+    }
+    .col-lg-12 {
+        text-align: left;
+    }
+    .form-check-input {
+        text-align: left;
+    }
+    .btn-primary {
+        text-align: center;
+    }
+    .btn-primary:hover {
+        text-align: center;
+    }
+    .btn-primary:focus {
+        text-align: center;
+    }
+    .btn-primary:active {
+        text-align: center;
+    }
+    .btn-primary:visited {
+        text-align: center;
+    }
+    .btn-primary:disabled {
+        text-align: center;
+    }
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .btn-primary:not(:disabled):not(.disabled):active {
+        text-align: center;
+    }
+    .btn-primary:not(:disabled):not(.disabled).active:focus,
+    .btn-primary:not(:disabled):not(.disabled):active:focus {
+        text-align: center;
+    }
+    .btn-primary:not(:disabled):not(.disabled).active:hover,
+    .btn-primary:not(:disabled):not(.disabled):active:hover {
+        text-align: center;
+    }
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active {
+        text-align: center;
+    }
+    .btn-primary:not(:disabled):not(.disabled):active:focus,
+    .btn-primary:not(:disabled):not(.disabled).active:focus {
+        text-align: center;
+    }
+    .btn-primary:not(:disabled):not(.disabled):active:hover,
+    .btn-primary:not(:disabled):not(.disabled).active:hover {
+        text-align: center;
+    }
+    .btn-primary:not(:disabled):not(.disabled):focus, .btn-primary:not(:disabled):not(.disabled):active:focus {
+        box-shadow: none;
+    }
+    .btn-primary:not(:disabled):not(.disabled):focus, .btn-primary:not(:disabled):not(.disabled):active:focus {
+        outline: 0;
+    }
+    .btn-primary.disabled, .btn-primary:disabled {
+        text-align: center;
+    }
+    .btn-primary.disabled:hover, .btn-primary:disabled:hover {
+        text-align: center;
+    }
+    .btn-primary.disabled:focus, .btn-primary:disabled:focus {
+        text-align: center;
+    }
+    .btn-primary.disabled.focus, .btn-primary:disabled.focus {
+        text-align: center;
+    }
+    .btn-primary.disabled.focus:hover, .btn-primary:disabled.focus:hover {
+        text-align: center;
+    }
+</style>
+<section> 
+    <h2>Sign in</h2>
+    <p>Per accedere al sito è necessario registrarsi</p>
+    <p>Se sei già registrato <a routerLink="/accedi">accedi</a></p>
+    <form class="px-4 py-3" [formGroup]="registerForm" (ngSubmit)="inviaDati(content)">
+        <div class="col-lg-6">
+            <label for="FormNome" class="form-label">Nome</label>
+            <input type="Nome" class="form-control" id="FormNome" placeholder="Nome " formControlName="nomeForm">
+        </div>
+        <div class="col-lg-6">
+            <label for="FormCognome" class="form-label">Cognome</label>
+            <input type="cognome" class="form-control" id="FormCognome" placeholder="cognome" formControlName="cognomeForm">
+        </div>
+        <div class="col-lg-6">
+            <label for="FormCodiceFiscale" class="form-label">Codice Fiscale</label>
+            <input type="codiceFiscale" class="form-control" id="FormCodiceFiscale" placeholder="codice fiscale" formControlName="codiceFiscaleForm">
+        </div>
+       <div>
+        <label for="FormSesso" class="form-label">Sesso</label>
+      <select class="form-select" id="sesso" formControlName="sessoForm">
+        <option *ngFor="let sesso of sesso" [value]="sesso">
+          {{ sesso }}
+        </option>
+      </select>
+    </div>
+    <div>
+        <label for="FormDataNascita" class="form-label">Data di nascita</label>
+        <input type="dataNascita" class="form-control" id="FormDataNascita" placeholder="data di nascita" formControlName="dataNascitaForm">
+    </div>
+    <div>
+        <label for="FormCitta" class="form-label">Città</label>
+        <input type="citta" class="form-control" id="FormCitta" placeholder="città" formControlName="cittaForm">
+    </div>
+    <div>
+        <label for="FormIndirizzo" class="form-label">Indirizzo</label>
+        <input type="indirizzo" class="form-control" id="FormIndirizzo" placeholder="indirizzo" formControlName="indirizzoForm">
+    </div>
+    <div>
+        <label for="FormCap" class="form-label">CAP</label>
+        <input type="cap" class="form-control" id="FormCap" placeholder="cap" formControlName="capForm">
+    </div>
+    <div>
+        <label for="FormTelefono" class="form-label">Telefono</label>
+        <input type="telefono" class="form-control" id="FormTelefono" placeholder="telefono" formControlName="telefonoForm">
+    </div>
+    <div>
+        <label for="FormUsername" class="form-label">Username</label>
+        <input type="Username" class="form-control" id="Username" placeholder="Username" formControlName="UsernameForm">
+    </div>
+      <div class="col-lg-6">
+        <label for="eFormEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="FormEmail1" placeholder="email@example.com" formControlName="emailForm">
+      </div>
+      <div class="col-lg-6">
+        <label for="FormPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="FormPassword1" placeholder="Password" formControlName="passwordForm">
+      </div>
+      <div class="col-lg-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="Check">
+          <label class="form-check-label" for="Check">
+            Remember me
+          </label>
+        </div>
+      </div>
+        <div class="col-lg-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </form>
+</section>

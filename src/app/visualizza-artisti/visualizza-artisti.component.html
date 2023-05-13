@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <caption>
+    Trovati
+    {{
+      artisti?.length
+    }}
+    Artisti
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Nazione</th>
+      <th scope="col">Anno Inizio</th>
+      <th scope="col">Gruppo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let artista of artisti; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td [innerHTML]="artista.nome"></td>
+      <td [innerHTML]="artista.nazione"></td>
+      <td [innerHTML]="artista.annoInizio"></td>
+      <td [innerHTML]="artista.gruppo ? 'Sì' : 'No'"></td>
+    </tr>
+  </tbody>
+</table>
