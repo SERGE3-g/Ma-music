@@ -32,8 +32,8 @@ export class LoginComponent {
     confermapasswordForm: new FormControl(''),
     attivoForm: new FormControl(''),
   });
-   
-  content="Sei stato registrato con successo";
+
+  content=" Complimenti Sei stato registrato con successo";
   registerInserito: any = null;
 
   constructor(private registerSvc: RegisterService , private modaleSvc:NgbModal) {}
@@ -60,15 +60,17 @@ export class LoginComponent {
       confermapassword: datiRegister.confermapasswordForm!,
       attivo: datiRegister.attivoForm!,
     };
-   /*this.registerSvc.save(register).subscribe({
-      next:(response) => {
-        this.registerInserito = response;
-        this.modaleSvc.open(modal);
-      },
-    });*/
 
+    // this.registerSvc.save(register).subscribe({
+    //   next: (response) => {
+    //     this.registerInserito = response;
+    //     this.modaleSvc.open(modal);
+    //   }
+    // })
+    console.log(register);
   }
- 
-  
-}  
+
+
+
+}
 

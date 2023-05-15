@@ -42,8 +42,8 @@ export class AccediComponent implements OnInit {
         this.modaleSvc.open(modal);
       }
     });
-    console.log(login);
-      
+  
+
   }
 
 }

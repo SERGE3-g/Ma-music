@@ -104,11 +104,11 @@
         text-align: center;
     }
 </style>
-<section> 
+<section>
     <h2>Sign in</h2>
     <p>Per accedere al sito è necessario registrarsi</p>
     <p>Se sei già registrato <a routerLink="/accedi">accedi</a></p>
-    <form class="px-4 py-3" [formGroup]="registerForm" (ngSubmit)="inviaDati(content)">
+    <form class="px-4 py-3" [formGroup]="registerForm" (ngSubmit)="inviaDati('')">
         <div class="col-lg-6">
             <label for="FormNome" class="form-label">Nome</label>
             <input type="Nome" class="form-control" id="FormNome" placeholder="Nome " formControlName="nomeForm">

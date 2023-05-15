@@ -22,6 +22,7 @@ import { VisualizzaAlbumComponent } from './visualizza-album/visualizza-album.co
 import { CercaAlbumComponent } from './cerca-album/cerca-album.component';
 import { AboutComponent } from './about/about.component';
 import { ContattiComponent } from './contatti/contatti.component';
+import { DatabaseService } from './service/database.service';
 
 @NgModule({
   declarations: [
@@ -54,4 +55,7 @@ import { ContattiComponent } from './contatti/contatti.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+ 
+}
+
