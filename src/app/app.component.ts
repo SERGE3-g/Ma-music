@@ -9,14 +9,14 @@ import { DatabaseService } from './service/database.service';
 export class AppComponent {
   title = 'Web Music';
 
-  constructor(private databaseService: DatabaseService) {}
+  /* constructor(private databaseService: DatabaseService) {}
 
   ngOnInit() {
-   /* this.databaseService.connect().then(() => {
+   this.databaseService.connect().then(() => {
       this.databaseService.query('SELECT * FROM  accedi').then(results => {
         console.log(results);
       });
     });*/
   }
 
-}
+
