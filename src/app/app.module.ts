@@ -23,6 +23,7 @@ import { CercaAlbumComponent } from './cerca-album/cerca-album.component';
 import { AboutComponent } from './about/about.component';
 import { ContattiComponent } from './contatti/contatti.component';
 import { DatabaseService } from './service/database.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { DatabaseService } from './service/database.service';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
