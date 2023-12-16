@@ -13,6 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "browserTarget": "ng-music:build",
+            "proxyConfig": "src/proxy.conf.json",
+            "allowedCommonJsDependencies": [
+              "lodash"
+            ],
             "outputPath": "dist/ng-music",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -55,7 +60,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -69,6 +80,9 @@
             "development": {
               "browserTarget": "ng-music:build:development"
             }
+          },
+          "staging": {
+            "browserTarget": "ng-music:build:staging"
           },
           "defaultConfiguration": "development"
         },
